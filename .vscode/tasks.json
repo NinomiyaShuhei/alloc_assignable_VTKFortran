@@ -1,0 +1,93 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "fpm build",
+            "type": "shell",
+            "options": {"cwd": "${workspaceFolder}"},
+            "command": "fpm",
+            "args": [
+                "build",
+                "--compiler",
+                "ifx",
+                "--profile",
+                "debug",
+                "--flag",
+                "\"-I/usr/local/include -names lowercase -standard-semantics\"",
+                "--link-flag",
+                "\"-L/usr/local/lib\""
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "label": "fpm test",
+            "type": "shell",
+            "options": {"cwd": "${workspaceFolder}"},
+            "command": "fpm",
+            "args": [
+                "test",
+                "--compiler",
+                "ifx",
+                "--profile",
+                "debug",
+                "--flag",
+                "\"-I/usr/local/include -names lowercase -standard-semantics\"",
+                "--link-flag",
+                "\"-L/usr/local/lib\""
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "label": "fpm run",
+            "type": "shell",
+            "options": {"cwd": "${workspaceFolder}"},
+            "command": "fpm",
+            "args": [
+                "run",
+                "--compiler",
+                "ifx",
+                "--profile",
+                "debug",
+                "--flag",
+                "\"-I/usr/local/include -names lowercase -standard-semantics\"",
+                "--link-flag",
+                "\"-L/usr/local/lib\""
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "label": "fpm install",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "group": "none",
+            "command": "fpm",
+            "args": [
+                "install",
+                "--compiler",
+                "ifx",
+                "--profile",
+                "debug",
+                "--flag",
+                "\"-I/usr/local/include -names lowercase -standard-semantics\"",
+                "--link-flag",
+                "\"-L/usr/local/lib\"",
+                "--prefix",
+                "./build"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

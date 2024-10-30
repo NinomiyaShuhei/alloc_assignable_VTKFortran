@@ -109,7 +109,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="1"...>...</DataArray>` tag (R8P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  real(R8P),                     intent(in)           :: x(1:)        !< Data variable.
+  real(R8P),                     allocatable, intent(in)           :: x(1:)        !< Data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -128,7 +128,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="1"...>...</DataArray>` tag (R4P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  real(R4P),                     intent(in)           :: x(1:)        !< Data variable.
+  real(R4P),                     allocatable, intent(in)           :: x(1:)        !< Data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -147,7 +147,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="1"...>...</DataArray>` tag (I8P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I8P),                  intent(in)           :: x(1:)        !< Data variable.
+  integer(I8P),                  allocatable, intent(in)           :: x(1:)        !< Data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -166,7 +166,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="1"...>...</DataArray>` tag (I4P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I4P),                  intent(in)           :: x(1:)        !< Data variable.
+  integer(I4P),                  allocatable, intent(in)           :: x(1:)        !< Data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -185,7 +185,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="1"...>...</DataArray>` tag (I2P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I2P),                  intent(in)           :: x(1:)        !< Data variable.
+  integer(I2P),                  allocatable, intent(in)           :: x(1:)        !< Data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -204,7 +204,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="1"...>...</DataArray>` tag (I1P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I1P),                  intent(in)           :: x(1:)        !< Data variable.
+  integer(I1P),                  allocatable, intent(in)           :: x(1:)        !< Data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -223,7 +223,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (R8P).
   class(xml_writer_ascii_local), intent(inout)        :: self          !< Writer.
   character(*),                  intent(in)           :: data_name     !< Data name.
-  real(R8P),                     intent(in)           :: x(1:,1:)      !< Data variable.
+  real(R8P),                     allocatable, intent(in)           :: x(1:,1:)      !< Data variable.
   logical,                       intent(in), optional :: one_component !< Force one component.
   logical,                       intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error         !< Error status.
@@ -246,7 +246,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (R4P).
   class(xml_writer_ascii_local), intent(inout)        :: self          !< Writer.
   character(*),                  intent(in)           :: data_name     !< Data name.
-  real(R4P),                     intent(in)           :: x(1:,1:)      !< Data variable.
+  real(R4P),                     allocatable, intent(in)           :: x(1:,1:)      !< Data variable.
   logical,                       intent(in), optional :: one_component !< Force one component.
   logical,                       intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error         !< Error status.
@@ -269,7 +269,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (I8P).
   class(xml_writer_ascii_local), intent(inout)        :: self          !< Writer.
   character(*),                  intent(in)           :: data_name     !< Data name.
-  integer(I8P),                  intent(in)           :: x(1:,1:)      !< Data variable.
+  integer(I8P),                  allocatable, intent(in)           :: x(1:,1:)      !< Data variable.
   logical,                       intent(in), optional :: one_component !< Force one component.
   logical,                       intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error         !< Error status.
@@ -292,7 +292,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (I4P).
   class(xml_writer_ascii_local), intent(inout)        :: self          !< Writer.
   character(*),                  intent(in)           :: data_name     !< Data name.
-  integer(I4P),                  intent(in)           :: x(1:,1:)      !< Data variable.
+  integer(I4P),                  allocatable, intent(in)           :: x(1:,1:)      !< Data variable.
   logical,                       intent(in), optional :: one_component !< Force one component.
   logical,                       intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error         !< Error status.
@@ -315,7 +315,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (I2P).
   class(xml_writer_ascii_local), intent(inout)        :: self          !< Writer.
   character(*),                  intent(in)           :: data_name     !< Data name.
-  integer(I2P),                  intent(in)           :: x(1:,1:)      !< Data variable.
+  integer(I2P),                  allocatable, intent(in)           :: x(1:,1:)      !< Data variable.
   logical,                       intent(in), optional :: one_component !< Force one component.
   logical,                       intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error         !< Error status.
@@ -338,7 +338,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (I1P).
   class(xml_writer_ascii_local), intent(inout)        :: self          !< Writer.
   character(*),                  intent(in)           :: data_name     !< Data name.
-  integer(I1P),                  intent(in)           :: x(1:,1:)      !< Data variable.
+  integer(I1P),                  allocatable, intent(in)           :: x(1:,1:)      !< Data variable.
   logical,                       intent(in), optional :: one_component !< Force one component.
   logical,                       intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error         !< Error status.
@@ -361,7 +361,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (R8P).
   class(xml_writer_ascii_local), intent(inout)        :: self          !< Writer.
   character(*),                  intent(in)           :: data_name     !< Data name.
-  real(R8P),                     intent(in)           :: x(1:,1:,1:)   !< Data variable.
+  real(R8P),                     allocatable, intent(in)           :: x(1:,1:,1:)   !< Data variable.
   logical,                       intent(in), optional :: one_component !< Force one component.
   logical,                       intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error         !< Error status.
@@ -384,7 +384,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (R4P).
   class(xml_writer_ascii_local), intent(inout)        :: self          !< Writer.
   character(*),                  intent(in)           :: data_name     !< Data name.
-  real(R4P),                     intent(in)           :: x(1:,1:,1:)   !< Data variable.
+  real(R4P),                     allocatable, intent(in)           :: x(1:,1:,1:)   !< Data variable.
   logical,                       intent(in), optional :: one_component !< Force one component.
   logical,                       intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error         !< Error status.
@@ -407,7 +407,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (I8P).
   class(xml_writer_ascii_local), intent(inout)        :: self          !< Writer.
   character(*),                  intent(in)           :: data_name     !< Data name.
-  integer(I8P),                  intent(in)           :: x(1:,1:,1:)   !< Data variable.
+  integer(I8P),                  allocatable, intent(in)           :: x(1:,1:,1:)   !< Data variable.
   logical,                       intent(in), optional :: one_component !< Force one component.
   logical,                       intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error         !< Error status.
@@ -430,7 +430,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (I4P).
   class(xml_writer_ascii_local), intent(inout)        :: self          !< Writer.
   character(*),                  intent(in)           :: data_name     !< Data name.
-  integer(I4P),                  intent(in)           :: x(1:,1:,1:)   !< Data variable.
+  integer(I4P),                  allocatable, intent(in)           :: x(1:,1:,1:)   !< Data variable.
   logical,                       intent(in), optional :: one_component !< Force one component.
   logical,                       intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error         !< Error status.
@@ -453,7 +453,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (I2P).
   class(xml_writer_ascii_local), intent(inout)        :: self          !< Writer.
   character(*),                  intent(in)           :: data_name     !< Data name.
-  integer(I2P),                  intent(in)           :: x(1:,1:,1:)   !< Data variable.
+  integer(I2P),                  allocatable, intent(in)           :: x(1:,1:,1:)   !< Data variable.
   logical,                       intent(in), optional :: one_component !< Force one component.
   logical,                       intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error         !< Error status.
@@ -476,7 +476,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (I1P).
   class(xml_writer_ascii_local), intent(inout)        :: self          !< Writer.
   character(*),                  intent(in)           :: data_name     !< Data name.
-  integer(I1P),                  intent(in)           :: x(1:,1:,1:)   !< Data variable.
+  integer(I1P),                  allocatable, intent(in)           :: x(1:,1:,1:)   !< Data variable.
   logical,                       intent(in), optional :: one_component !< Force one component.
   logical,                       intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error         !< Error status.
@@ -499,7 +499,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (R8P).
   class(xml_writer_ascii_local), intent(inout)        :: self           !< Writer.
   character(*),                  intent(in)           :: data_name      !< Data name.
-  real(R8P),                     intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
+  real(R8P),                     allocatable, intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
   logical,                       intent(in), optional :: one_component  !< Force one component.
   logical,                       intent(in), optional :: is_tuples      !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error          !< Error status.
@@ -522,7 +522,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (R4P).
   class(xml_writer_ascii_local), intent(inout)        :: self           !< Writer.
   character(*),                  intent(in)           :: data_name      !< Data name.
-  real(R4P),                     intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
+  real(R4P),                     allocatable, intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
   logical,                       intent(in), optional :: one_component  !< Force one component.
   logical,                       intent(in), optional :: is_tuples      !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error          !< Error status.
@@ -545,7 +545,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (I8P).
   class(xml_writer_ascii_local), intent(inout)        :: self           !< Writer.
   character(*),                  intent(in)           :: data_name      !< Data name.
-  integer(I8P),                  intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
+  integer(I8P),                  allocatable, intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
   logical,                       intent(in), optional :: one_component  !< Force one component.
   logical,                       intent(in), optional :: is_tuples      !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error          !< Error status.
@@ -568,7 +568,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (I4P).
   class(xml_writer_ascii_local), intent(inout)        :: self           !< Writer.
   character(*),                  intent(in)           :: data_name      !< Data name.
-  integer(I4P),                  intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
+  integer(I4P),                  allocatable, intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
   logical,                       intent(in), optional :: one_component  !< Force one component.
   logical,                       intent(in), optional :: is_tuples      !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error          !< Error status.
@@ -591,7 +591,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (I2P).
   class(xml_writer_ascii_local), intent(inout)        :: self           !< Writer.
   character(*),                  intent(in)           :: data_name      !< Data name.
-  integer(I2P),                  intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
+  integer(I2P),                  allocatable, intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
   logical,                       intent(in), optional :: one_component  !< Force one component.
   logical,                       intent(in), optional :: is_tuples      !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error          !< Error status.
@@ -614,7 +614,7 @@ contains
   !< Write `<DataArray... NumberOfComponents="n"...>...</DataArray>` tag (I1P).
   class(xml_writer_ascii_local), intent(inout)        :: self           !< Writer.
   character(*),                  intent(in)           :: data_name      !< Data name.
-  integer(I1P),                  intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
+  integer(I1P),                  allocatable, intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
   logical,                       intent(in), optional :: one_component  !< Force one component.
   logical,                       intent(in), optional :: is_tuples      !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error          !< Error status.
@@ -637,9 +637,9 @@ contains
   !< Write `<DataArray... NumberOfComponents="3"...>...</DataArray>` tag (R8P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  real(R8P),                     intent(in)           :: x(1:)        !< X component of data variable.
-  real(R8P),                     intent(in)           :: y(1:)        !< Y component of data variable.
-  real(R8P),                     intent(in)           :: z(1:)        !< Z component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -658,9 +658,9 @@ contains
   !< Write `<DataArray... NumberOfComponents="3"...>...</DataArray>` tag (R4P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  real(R4P),                     intent(in)           :: x(1:)        !< X component of data variable.
-  real(R4P),                     intent(in)           :: y(1:)        !< Y component of data variable.
-  real(R4P),                     intent(in)           :: z(1:)        !< Z component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -679,9 +679,9 @@ contains
   !< Write `<DataArray... NumberOfComponents="3"...>...</DataArray>` tag (I8P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I8P),                  intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I8P),                  intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I8P),                  intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -700,9 +700,9 @@ contains
   !< Write `<DataArray... NumberOfComponents="3"...>...</DataArray>` tag (I4P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I4P),                  intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I4P),                  intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I4P),                  intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -721,9 +721,9 @@ contains
   !< Write `<DataArray... NumberOfComponents="3"...>...</DataArray>` tag (I2P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I2P),                  intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I2P),                  intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I2P),                  intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -742,9 +742,9 @@ contains
   !< Write `<DataArray... NumberOfComponents="3"...>...</DataArray>` tag (I1P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I1P),                  intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I1P),                  intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I1P),                  intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -763,9 +763,9 @@ contains
   !< Write `<DataArray... NumberOfComponents="3"...>...</DataArray>` tag (R8P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  real(R8P),                     intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  real(R8P),                     intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  real(R8P),                     intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -784,9 +784,9 @@ contains
   !< Write `<DataArray... NumberOfComponents="3"...>...</DataArray>` tag (R4P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  real(R4P),                     intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  real(R4P),                     intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  real(R4P),                     intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -805,9 +805,9 @@ contains
   !< Write `<DataArray... NumberOfComponents="3"...>...</DataArray>` tag (I8P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I8P),                  intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I8P),                  intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I8P),                  intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -826,9 +826,9 @@ contains
   !< Write `<DataArray... NumberOfComponents="3"...>...</DataArray>` tag (I4P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I4P),                  intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I4P),                  intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I4P),                  intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -847,9 +847,9 @@ contains
   !< Write `<DataArray... NumberOfComponents="3"...>...</DataArray>` tag (I2P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I2P),                  intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I2P),                  intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I2P),                  intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -868,9 +868,9 @@ contains
   !< Write `<DataArray... NumberOfComponents="3"...>...</DataArray>` tag (I1P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I1P),                  intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I1P),                  intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I1P),                  intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -889,12 +889,12 @@ contains
   !< Write `<DataArray... NumberOfComponents="6"...>...</DataArray>` tag (R8P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  real(R8P),                     intent(in)           :: u(1:)        !< U component of data variable.
-  real(R8P),                     intent(in)           :: v(1:)        !< V component of data variable.
-  real(R8P),                     intent(in)           :: w(1:)        !< W component of data variable.
-  real(R8P),                     intent(in)           :: x(1:)        !< X component of data variable.
-  real(R8P),                     intent(in)           :: y(1:)        !< Y component of data variable.
-  real(R8P),                     intent(in)           :: z(1:)        !< Z component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: u(1:)        !< U component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: v(1:)        !< V component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: w(1:)        !< W component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -913,12 +913,12 @@ contains
   !< Write `<DataArray... NumberOfComponents="6"...>...</DataArray>` tag (R4P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  real(R4P),                     intent(in)           :: u(1:)        !< U component of data variable.
-  real(R4P),                     intent(in)           :: v(1:)        !< V component of data variable.
-  real(R4P),                     intent(in)           :: w(1:)        !< W component of data variable.
-  real(R4P),                     intent(in)           :: x(1:)        !< X component of data variable.
-  real(R4P),                     intent(in)           :: y(1:)        !< Y component of data variable.
-  real(R4P),                     intent(in)           :: z(1:)        !< Z component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: u(1:)        !< U component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: v(1:)        !< V component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: w(1:)        !< W component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -937,12 +937,12 @@ contains
   !< Write `<DataArray... NumberOfComponents="6"...>...</DataArray>` tag (I8P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I8P),                  intent(in)           :: u(1:)        !< U component of data variable.
-  integer(I8P),                  intent(in)           :: v(1:)        !< V component of data variable.
-  integer(I8P),                  intent(in)           :: w(1:)        !< W component of data variable.
-  integer(I8P),                  intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I8P),                  intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I8P),                  intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: u(1:)        !< U component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: v(1:)        !< V component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: w(1:)        !< W component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -961,12 +961,12 @@ contains
   !< Write `<DataArray... NumberOfComponents="6"...>...</DataArray>` tag (I4P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I4P),                  intent(in)           :: u(1:)        !< U component of data variable.
-  integer(I4P),                  intent(in)           :: v(1:)        !< V component of data variable.
-  integer(I4P),                  intent(in)           :: w(1:)        !< W component of data variable.
-  integer(I4P),                  intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I4P),                  intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I4P),                  intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: u(1:)        !< U component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: v(1:)        !< V component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: w(1:)        !< W component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -985,12 +985,12 @@ contains
   !< Write `<DataArray... NumberOfComponents="6"...>...</DataArray>` tag (I2P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I2P),                  intent(in)           :: u(1:)        !< U component of data variable.
-  integer(I2P),                  intent(in)           :: v(1:)        !< V component of data variable.
-  integer(I2P),                  intent(in)           :: w(1:)        !< W component of data variable.
-  integer(I2P),                  intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I2P),                  intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I2P),                  intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: u(1:)        !< U component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: v(1:)        !< V component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: w(1:)        !< W component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -1009,12 +1009,12 @@ contains
   !< Write `<DataArray... NumberOfComponents="6"...>...</DataArray>` tag (I1P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I1P),                  intent(in)           :: u(1:)        !< U component of data variable.
-  integer(I1P),                  intent(in)           :: v(1:)        !< V component of data variable.
-  integer(I1P),                  intent(in)           :: w(1:)        !< W component of data variable.
-  integer(I1P),                  intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I1P),                  intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I1P),                  intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: u(1:)        !< U component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: v(1:)        !< V component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: w(1:)        !< W component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -1033,12 +1033,12 @@ contains
   !< Write `<DataArray... NumberOfComponents="6"...>...</DataArray>` tag (R8P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  real(R8P),                     intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
-  real(R8P),                     intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
-  real(R8P),                     intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
-  real(R8P),                     intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  real(R8P),                     intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  real(R8P),                     intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  real(R8P),                     allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -1057,12 +1057,12 @@ contains
   !< Write `<DataArray... NumberOfComponents="6"...>...</DataArray>` tag (R4P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  real(R4P),                     intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
-  real(R4P),                     intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
-  real(R4P),                     intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
-  real(R4P),                     intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  real(R4P),                     intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  real(R4P),                     intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  real(R4P),                     allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -1081,12 +1081,12 @@ contains
   !< Write `<DataArray... NumberOfComponents="6"...>...</DataArray>` tag (I8P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I8P),                  intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
-  integer(I8P),                  intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
-  integer(I8P),                  intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
-  integer(I8P),                  intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I8P),                  intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I8P),                  intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I8P),                  allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -1105,12 +1105,12 @@ contains
   !< Write `<DataArray... NumberOfComponents="6"...>...</DataArray>` tag (I4P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I4P),                  intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
-  integer(I4P),                  intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
-  integer(I4P),                  intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
-  integer(I4P),                  intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I4P),                  intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I4P),                  intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I4P),                  allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -1129,12 +1129,12 @@ contains
   !< Write `<DataArray... NumberOfComponents="6"...>...</DataArray>` tag (I2P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I2P),                  intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
-  integer(I2P),                  intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
-  integer(I2P),                  intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
-  integer(I2P),                  intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I2P),                  intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I2P),                  intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I2P),                  allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.
@@ -1153,12 +1153,12 @@ contains
   !< Write `<DataArray... NumberOfComponents="6"...>...</DataArray>` tag (I1P).
   class(xml_writer_ascii_local), intent(inout)        :: self         !< Writer.
   character(*),                  intent(in)           :: data_name    !< Data name.
-  integer(I1P),                  intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
-  integer(I1P),                  intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
-  integer(I1P),                  intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
-  integer(I1P),                  intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I1P),                  intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I1P),                  intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I1P),                  allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                       intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                        :: error        !< Error status.
   character(len=:), allocatable                       :: data_type    !< Data type.

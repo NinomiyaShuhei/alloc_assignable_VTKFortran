@@ -227,7 +227,7 @@ abstract interface
   import :: xml_writer_abstract, I4P, R8P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  real(R8P),                  intent(in)           :: x(1:)        !< Data variable.
+  real(R8P),                  allocatable, intent(in)           :: x(1:)        !< Data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray1_rank1_R8P_interface
@@ -237,7 +237,7 @@ abstract interface
   import :: xml_writer_abstract, I4P, R4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  real(R4P),                  intent(in)           :: x(1:)        !< Data variable.
+  real(R4P),                  allocatable, intent(in)           :: x(1:)        !< Data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray1_rank1_R4P_interface
@@ -247,7 +247,7 @@ abstract interface
   import :: xml_writer_abstract, I4P, I8P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I8P),               intent(in)           :: x(1:)        !< Data variable.
+  integer(I8P),               allocatable, intent(in)           :: x(1:)        !< Data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray1_rank1_I8P_interface
@@ -257,7 +257,7 @@ abstract interface
   import :: xml_writer_abstract, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I4P),               intent(in)           :: x(1:)        !< Data variable.
+  integer(I4P),               allocatable, intent(in)           :: x(1:)        !< Data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray1_rank1_I4P_interface
@@ -267,7 +267,7 @@ abstract interface
   import :: xml_writer_abstract, I2P, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I2P),               intent(in)           :: x(1:)        !< Data variable.
+  integer(I2P),               allocatable, intent(in)           :: x(1:)        !< Data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray1_rank1_I2P_interface
@@ -277,7 +277,7 @@ abstract interface
   import :: xml_writer_abstract, I1P, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I1P),               intent(in)           :: x(1:)        !< Data variable.
+  integer(I1P),               allocatable, intent(in)           :: x(1:)        !< Data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray1_rank1_I1P_interface
@@ -287,7 +287,7 @@ abstract interface
   import :: xml_writer_abstract, I4P, R8P
   class(xml_writer_abstract), intent(inout)        :: self          !< Writer.
   character(*),               intent(in)           :: data_name     !< Data name.
-  real(R8P),                  intent(in)           :: x(1:,1:)      !< Data variable.
+  real(R8P),                  allocatable, intent(in)           :: x(1:,1:)      !< Data variable.
   logical,                    intent(in), optional :: one_component !< Force one component.
   logical,                    intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error         !< Error status.
@@ -298,7 +298,7 @@ abstract interface
   import :: xml_writer_abstract, I4P, R4P
   class(xml_writer_abstract), intent(inout)        :: self          !< Writer.
   character(*),               intent(in)           :: data_name     !< Data name.
-  real(R4P),                  intent(in)           :: x(1:,1:)      !< Data variable.
+  real(R4P),                  allocatable, intent(in)           :: x(1:,1:)      !< Data variable.
   logical,                    intent(in), optional :: one_component !< Force one component.
   logical,                    intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error         !< Error status.
@@ -309,7 +309,7 @@ abstract interface
   import :: xml_writer_abstract, I4P, I8P
   class(xml_writer_abstract), intent(inout)        :: self          !< Writer.
   character(*),               intent(in)           :: data_name     !< Data name.
-  integer(I8P),               intent(in)           :: x(1:,1:)      !< Data variable.
+  integer(I8P),               allocatable, intent(in)           :: x(1:,1:)      !< Data variable.
   logical,                    intent(in), optional :: one_component !< Force one component.
   logical,                    intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error         !< Error status.
@@ -320,7 +320,7 @@ abstract interface
   import :: xml_writer_abstract, I4P
   class(xml_writer_abstract), intent(inout)        :: self          !< Writer.
   character(*),               intent(in)           :: data_name     !< Data name.
-  integer(I4P),               intent(in)           :: x(1:,1:)      !< Data variable.
+  integer(I4P),               allocatable, intent(in)           :: x(1:,1:)      !< Data variable.
   logical,                    intent(in), optional :: one_component !< Force one component.
   logical,                    intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error         !< Error status.
@@ -331,7 +331,7 @@ abstract interface
   import :: xml_writer_abstract, I2P, I4P
   class(xml_writer_abstract), intent(inout)        :: self          !< Writer.
   character(*),               intent(in)           :: data_name     !< Data name.
-  integer(I2P),               intent(in)           :: x(1:,1:)      !< Data variable.
+  integer(I2P),               allocatable, intent(in)           :: x(1:,1:)      !< Data variable.
   logical,                    intent(in), optional :: one_component !< Force one component.
   logical,                    intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error         !< Error status.
@@ -342,7 +342,7 @@ abstract interface
   import :: xml_writer_abstract, I1P, I4P
   class(xml_writer_abstract), intent(inout)        :: self          !< Writer.
   character(*),               intent(in)           :: data_name     !< Data name.
-  integer(I1P),               intent(in)           :: x(1:,1:)      !< Data variable.
+  integer(I1P),               allocatable, intent(in)           :: x(1:,1:)      !< Data variable.
   logical,                    intent(in), optional :: one_component !< Force one component.
   logical,                    intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error         !< Error status.
@@ -353,7 +353,7 @@ abstract interface
   import :: xml_writer_abstract, I4P, R8P
   class(xml_writer_abstract), intent(inout)        :: self          !< Writer.
   character(*),               intent(in)           :: data_name     !< Data name.
-  real(R8P),                  intent(in)           :: x(1:,1:,1:)   !< Data variable.
+  real(R8P),                  allocatable, intent(in)           :: x(1:,1:,1:)   !< Data variable.
   logical,                    intent(in), optional :: one_component !< Force one component.
   logical,                    intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error         !< Error status.
@@ -364,7 +364,7 @@ abstract interface
   import :: xml_writer_abstract, I4P, R4P
   class(xml_writer_abstract), intent(inout)        :: self          !< Writer.
   character(*),               intent(in)           :: data_name     !< Data name.
-  real(R4P),                  intent(in)           :: x(1:,1:,1:)   !< Data variable.
+  real(R4P),                  allocatable, intent(in)           :: x(1:,1:,1:)   !< Data variable.
   logical,                    intent(in), optional :: one_component !< Force one component.
   logical,                    intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error         !< Error status.
@@ -375,7 +375,7 @@ abstract interface
   import :: xml_writer_abstract, I4P, I8P
   class(xml_writer_abstract), intent(inout)        :: self          !< Writer.
   character(*),               intent(in)           :: data_name     !< Data name.
-  integer(I8P),               intent(in)           :: x(1:,1:,1:)   !< Data variable.
+  integer(I8P),               allocatable, intent(in)           :: x(1:,1:,1:)   !< Data variable.
   logical,                    intent(in), optional :: one_component !< Force one component.
   logical,                    intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error         !< Error status.
@@ -386,7 +386,7 @@ abstract interface
   import :: xml_writer_abstract, I4P
   class(xml_writer_abstract), intent(inout)        :: self          !< Writer.
   character(*),               intent(in)           :: data_name     !< Data name.
-  integer(I4P),               intent(in)           :: x(1:,1:,1:)   !< Data variable.
+  integer(I4P),               allocatable, intent(in)           :: x(1:,1:,1:)   !< Data variable.
   logical,                    intent(in), optional :: one_component !< Force one component.
   logical,                    intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error         !< Error status.
@@ -397,7 +397,7 @@ abstract interface
   import :: xml_writer_abstract, I2P, I4P
   class(xml_writer_abstract), intent(inout)        :: self          !< Writer.
   character(*),               intent(in)           :: data_name     !< Data name.
-  integer(I2P),               intent(in)           :: x(1:,1:,1:)   !< Data variable.
+  integer(I2P),               allocatable, intent(in)           :: x(1:,1:,1:)   !< Data variable.
   logical,                    intent(in), optional :: one_component !< Force one component.
   logical,                    intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error         !< Error status.
@@ -408,7 +408,7 @@ abstract interface
   import :: xml_writer_abstract, I1P, I4P
   class(xml_writer_abstract), intent(inout)        :: self          !< Writer.
   character(*),               intent(in)           :: data_name     !< Data name.
-  integer(I1P),               intent(in)           :: x(1:,1:,1:)   !< Data variable.
+  integer(I1P),               allocatable, intent(in)           :: x(1:,1:,1:)   !< Data variable.
   logical,                    intent(in), optional :: one_component !< Force one component.
   logical,                    intent(in), optional :: is_tuples     !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error         !< Error status.
@@ -419,7 +419,7 @@ abstract interface
   import :: xml_writer_abstract, I4P, R8P
   class(xml_writer_abstract), intent(inout)        :: self           !< Writer.
   character(*),               intent(in)           :: data_name      !< Data name.
-  real(R8P),                  intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
+  real(R8P),                  allocatable, intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
   logical,                    intent(in), optional :: one_component  !< Force one component.
   logical,                    intent(in), optional :: is_tuples      !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error          !< Error status.
@@ -430,7 +430,7 @@ abstract interface
   import :: xml_writer_abstract, I4P, R4P
   class(xml_writer_abstract), intent(inout)        :: self           !< Writer.
   character(*),               intent(in)           :: data_name      !< Data name.
-  real(R4P),                  intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
+  real(R4P),                  allocatable, intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
   logical,                    intent(in), optional :: one_component  !< Force one component.
   logical,                    intent(in), optional :: is_tuples      !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error          !< Error status.
@@ -441,7 +441,7 @@ abstract interface
   import :: xml_writer_abstract, I4P, I8P
   class(xml_writer_abstract), intent(inout)        :: self           !< Writer.
   character(*),               intent(in)           :: data_name      !< Data name.
-  integer(I8P),               intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
+  integer(I8P),               allocatable, intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
   logical,                    intent(in), optional :: one_component  !< Force one component.
   logical,                    intent(in), optional :: is_tuples      !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error          !< Error status.
@@ -452,7 +452,7 @@ abstract interface
   import :: xml_writer_abstract, I4P
   class(xml_writer_abstract), intent(inout)        :: self           !< Writer.
   character(*),               intent(in)           :: data_name      !< Data name.
-  integer(I4P),               intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
+  integer(I4P),               allocatable, intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
   logical,                    intent(in), optional :: one_component  !< Force one component.
   logical,                    intent(in), optional :: is_tuples      !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error          !< Error status.
@@ -463,7 +463,7 @@ abstract interface
   import :: xml_writer_abstract, I2P, I4P
   class(xml_writer_abstract), intent(inout)        :: self           !< Writer.
   character(*),               intent(in)           :: data_name      !< Data name.
-  integer(I2P),               intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
+  integer(I2P),               allocatable, intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
   logical,                    intent(in), optional :: one_component  !< Force one component.
   logical,                    intent(in), optional :: is_tuples      !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error          !< Error status.
@@ -474,7 +474,7 @@ abstract interface
   import :: xml_writer_abstract, I1P, I4P
   class(xml_writer_abstract), intent(inout)        :: self           !< Writer.
   character(*),               intent(in)           :: data_name      !< Data name.
-  integer(I1P),               intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
+  integer(I1P),               allocatable, intent(in)           :: x(1:,1:,1:,1:) !< Data variable.
   logical,                    intent(in), optional :: one_component  !< Force one component.
   logical,                    intent(in), optional :: is_tuples      !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error          !< Error status.
@@ -485,9 +485,9 @@ abstract interface
   import :: xml_writer_abstract, I4P, R8P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  real(R8P),                  intent(in)           :: x(1:)        !< X component of data variable.
-  real(R8P),                  intent(in)           :: y(1:)        !< Y component of data variable.
-  real(R8P),                  intent(in)           :: z(1:)        !< Z component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray3_rank1_R8P_interface
@@ -497,9 +497,9 @@ abstract interface
   import :: xml_writer_abstract, I4P, R4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  real(R4P),                  intent(in)           :: x(1:)        !< X component of data variable.
-  real(R4P),                  intent(in)           :: y(1:)        !< Y component of data variable.
-  real(R4P),                  intent(in)           :: z(1:)        !< Z component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray3_rank1_R4P_interface
@@ -509,9 +509,9 @@ abstract interface
   import :: xml_writer_abstract, I4P, I8P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I8P),               intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I8P),               intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I8P),               intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray3_rank1_I8P_interface
@@ -521,9 +521,9 @@ abstract interface
   import :: xml_writer_abstract, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I4P),               intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I4P),               intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I4P),               intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray3_rank1_I4P_interface
@@ -533,9 +533,9 @@ abstract interface
   import :: xml_writer_abstract, I2P, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I2P),               intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I2P),               intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I2P),               intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray3_rank1_I2P_interface
@@ -545,9 +545,9 @@ abstract interface
   import :: xml_writer_abstract, I1P, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I1P),               intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I1P),               intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I1P),               intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray3_rank1_I1P_interface
@@ -557,9 +557,9 @@ abstract interface
   import :: xml_writer_abstract, I4P, R8P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  real(R8P),                  intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  real(R8P),                  intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  real(R8P),                  intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray3_rank3_R8P_interface
@@ -569,9 +569,9 @@ abstract interface
   import :: xml_writer_abstract, I4P, R4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  real(R4P),                  intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  real(R4P),                  intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  real(R4P),                  intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray3_rank3_R4P_interface
@@ -581,9 +581,9 @@ abstract interface
   import :: xml_writer_abstract, I4P, I8P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I8P),               intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I8P),               intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I8P),               intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray3_rank3_I8P_interface
@@ -593,9 +593,9 @@ abstract interface
   import :: xml_writer_abstract, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I4P),               intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I4P),               intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I4P),               intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray3_rank3_I4P_interface
@@ -605,9 +605,9 @@ abstract interface
   import :: xml_writer_abstract, I2P, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I2P),               intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I2P),               intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I2P),               intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray3_rank3_I2P_interface
@@ -617,9 +617,9 @@ abstract interface
   import :: xml_writer_abstract, I1P, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I1P),               intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I1P),               intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I1P),               intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray3_rank3_I1P_interface
@@ -629,12 +629,12 @@ abstract interface
   import :: xml_writer_abstract, I4P, R8P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  real(R8P),                  intent(in)           :: u(1:)        !< U component of data variable.
-  real(R8P),                  intent(in)           :: v(1:)        !< V component of data variable.
-  real(R8P),                  intent(in)           :: w(1:)        !< W component of data variable.
-  real(R8P),                  intent(in)           :: x(1:)        !< X component of data variable.
-  real(R8P),                  intent(in)           :: y(1:)        !< Y component of data variable.
-  real(R8P),                  intent(in)           :: z(1:)        !< Z component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: u(1:)        !< U component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: v(1:)        !< V component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: w(1:)        !< W component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray6_rank1_R8P_interface
@@ -644,12 +644,12 @@ abstract interface
   import :: xml_writer_abstract, I4P, R4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  real(R4P),                  intent(in)           :: u(1:)        !< U component of data variable.
-  real(R4P),                  intent(in)           :: v(1:)        !< V component of data variable.
-  real(R4P),                  intent(in)           :: w(1:)        !< W component of data variable.
-  real(R4P),                  intent(in)           :: x(1:)        !< X component of data variable.
-  real(R4P),                  intent(in)           :: y(1:)        !< Y component of data variable.
-  real(R4P),                  intent(in)           :: z(1:)        !< Z component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: u(1:)        !< U component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: v(1:)        !< V component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: w(1:)        !< W component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray6_rank1_R4P_interface
@@ -659,12 +659,12 @@ abstract interface
   import :: xml_writer_abstract, I4P, I8P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I8P),               intent(in)           :: u(1:)        !< U component of data variable.
-  integer(I8P),               intent(in)           :: v(1:)        !< V component of data variable.
-  integer(I8P),               intent(in)           :: w(1:)        !< W component of data variable.
-  integer(I8P),               intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I8P),               intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I8P),               intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: u(1:)        !< U component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: v(1:)        !< V component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: w(1:)        !< W component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray6_rank1_I8P_interface
@@ -674,12 +674,12 @@ abstract interface
   import :: xml_writer_abstract, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I4P),               intent(in)           :: u(1:)        !< U component of data variable.
-  integer(I4P),               intent(in)           :: v(1:)        !< V component of data variable.
-  integer(I4P),               intent(in)           :: w(1:)        !< W component of data variable.
-  integer(I4P),               intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I4P),               intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I4P),               intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: u(1:)        !< U component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: v(1:)        !< V component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: w(1:)        !< W component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray6_rank1_I4P_interface
@@ -689,12 +689,12 @@ abstract interface
   import :: xml_writer_abstract, I2P, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I2P),               intent(in)           :: u(1:)        !< U component of data variable.
-  integer(I2P),               intent(in)           :: v(1:)        !< V component of data variable.
-  integer(I2P),               intent(in)           :: w(1:)        !< W component of data variable.
-  integer(I2P),               intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I2P),               intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I2P),               intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: u(1:)        !< U component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: v(1:)        !< V component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: w(1:)        !< W component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray6_rank1_I2P_interface
@@ -704,12 +704,12 @@ abstract interface
   import :: xml_writer_abstract, I1P, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I1P),               intent(in)           :: u(1:)        !< U component of data variable.
-  integer(I1P),               intent(in)           :: v(1:)        !< V component of data variable.
-  integer(I1P),               intent(in)           :: w(1:)        !< W component of data variable.
-  integer(I1P),               intent(in)           :: x(1:)        !< X component of data variable.
-  integer(I1P),               intent(in)           :: y(1:)        !< Y component of data variable.
-  integer(I1P),               intent(in)           :: z(1:)        !< Z component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: u(1:)        !< U component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: v(1:)        !< V component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: w(1:)        !< W component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: x(1:)        !< X component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: y(1:)        !< Y component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: z(1:)        !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray6_rank1_I1P_interface
@@ -719,12 +719,12 @@ abstract interface
   import :: xml_writer_abstract, I4P, R8P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  real(R8P),                  intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
-  real(R8P),                  intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
-  real(R8P),                  intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
-  real(R8P),                  intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  real(R8P),                  intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  real(R8P),                  intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  real(R8P),                  allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray6_rank3_R8P_interface
@@ -734,12 +734,12 @@ abstract interface
   import :: xml_writer_abstract, I4P, R4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  real(R4P),                  intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
-  real(R4P),                  intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
-  real(R4P),                  intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
-  real(R4P),                  intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  real(R4P),                  intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  real(R4P),                  intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  real(R4P),                  allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray6_rank3_R4P_interface
@@ -749,12 +749,12 @@ abstract interface
   import :: xml_writer_abstract, I4P, I8P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I8P),               intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
-  integer(I8P),               intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
-  integer(I8P),               intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
-  integer(I8P),               intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I8P),               intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I8P),               intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I8P),               allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray6_rank3_I8P_interface
@@ -764,12 +764,12 @@ abstract interface
   import :: xml_writer_abstract, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I4P),               intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
-  integer(I4P),               intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
-  integer(I4P),               intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
-  integer(I4P),               intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I4P),               intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I4P),               intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I4P),               allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray6_rank3_I4P_interface
@@ -779,12 +779,12 @@ abstract interface
   import :: xml_writer_abstract, I2P, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I2P),               intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
-  integer(I2P),               intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
-  integer(I2P),               intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
-  integer(I2P),               intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I2P),               intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I2P),               intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I2P),               allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray6_rank3_I2P_interface
@@ -794,12 +794,12 @@ abstract interface
   import :: xml_writer_abstract, I1P, I4P
   class(xml_writer_abstract), intent(inout)        :: self         !< Writer.
   character(*),               intent(in)           :: data_name    !< Data name.
-  integer(I1P),               intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
-  integer(I1P),               intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
-  integer(I1P),               intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
-  integer(I1P),               intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
-  integer(I1P),               intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
-  integer(I1P),               intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: u(1:,1:,1:)  !< U component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: v(1:,1:,1:)  !< V component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: w(1:,1:,1:)  !< W component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: x(1:,1:,1:)  !< X component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: y(1:,1:,1:)  !< Y component of data variable.
+  integer(I1P),               allocatable, intent(in)           :: z(1:,1:,1:)  !< Z component of data variable.
   logical,                    intent(in), optional :: is_tuples    !< Use "NumberOfTuples" instead of "NumberOfComponents".
   integer(I4P)                                     :: error        !< Error status.
   endfunction write_dataarray6_rank3_I1P_interface
@@ -1116,22 +1116,47 @@ contains
    !< Write `<DataArray... NumberOfTuples="..."...>...</DataArray>` tag (R8P).
    class(xml_writer_abstract), intent(inout) :: self      !< Writer.
    character(*),               intent(in)    :: data_name !< Data name.
-   class(*),                   intent(in)    :: x         !< Data variable.
+   class(*),                   allocatable, intent(in)    :: x         !< Data variable.
    integer(I4P)                              :: error     !< Error status.
+
+   real(R8P), allocatable :: temp_real_r8(:)
+   real(R4P), allocatable :: temp_real_r4(:)
+   integer(I8P), allocatable :: temp_int_i8(:)
+   integer(I4P), allocatable :: temp_int_i4(:)
+   integer(I2P), allocatable :: temp_int_i2(:)
+   integer(I1P), allocatable :: temp_int_i1(:)
 
    select type(x)
    type is(real(R8P))
-      self%error = self%write_dataarray(data_name=data_name, x=[x], is_tuples=.true.)
+      allocate(temp_real_r8(1))
+      temp_real_r8 = [x]
+      self%error = self%write_dataarray(data_name=data_name, x=temp_real_r8, is_tuples=.true.)
+      deallocate(temp_real_r8)
    type is(real(R4P))
-      self%error = self%write_dataarray(data_name=data_name, x=[x], is_tuples=.true.)
+      allocate(temp_real_r4(1))
+      temp_real_r4 = [x]
+      self%error = self%write_dataarray(data_name=data_name, x=temp_real_r4, is_tuples=.true.)
+      deallocate(temp_real_r4)
    type is(integer(I8P))
-      self%error = self%write_dataarray(data_name=data_name, x=[x], is_tuples=.true.)
+      allocate(temp_int_i8(1))
+      temp_int_i8 = [x]
+      self%error = self%write_dataarray(data_name=data_name, x=temp_int_i8, is_tuples=.true.)
+      deallocate(temp_int_i8)
    type is(integer(I4P))
-      self%error = self%write_dataarray(data_name=data_name, x=[x], is_tuples=.true.)
+      allocate(temp_int_i4(1))
+      temp_int_i4 = [x]
+      self%error = self%write_dataarray(data_name=data_name, x=temp_int_i4, is_tuples=.true.)
+      deallocate(temp_int_i4)
    type is(integer(I2P))
-      self%error = self%write_dataarray(data_name=data_name, x=[x], is_tuples=.true.)
+      allocate(temp_int_i4(1))
+      temp_int_i4 = [x]
+      self%error = self%write_dataarray(data_name=data_name, x=temp_int_i4, is_tuples=.true.)
+      deallocate(temp_int_i4)
    type is(integer(I1P))
-      self%error = self%write_dataarray(data_name=data_name, x=[x], is_tuples=.true.)
+      allocate(temp_int_i4(1))
+      temp_int_i4 = [x]
+      self%error = self%write_dataarray(data_name=data_name, x=temp_int_i4, is_tuples=.true.)
+      deallocate(temp_int_i4)
    endselect
    error = self%error
    endfunction write_fielddata1_rank0
@@ -1199,9 +1224,9 @@ contains
    function write_geo_rect_data3_rank1_R8P(self, x, y, z) result(error)
    !< Write mesh with **RectilinearGrid** topology (data 3, rank 1, R8P).
    class(xml_writer_abstract), intent(inout) :: self  !< Writer.
-   real(R8P),                  intent(in)    :: x(1:) !< X coordinates.
-   real(R8P),                  intent(in)    :: y(1:) !< Y coordinates.
-   real(R8P),                  intent(in)    :: z(1:) !< Z coordinates.
+   real(R8P),                  allocatable, intent(in)    :: x(1:) !< X coordinates.
+   real(R8P),                  allocatable, intent(in)    :: y(1:) !< Y coordinates.
+   real(R8P),                  allocatable, intent(in)    :: z(1:) !< Z coordinates.
    integer(I4P)                              :: error !< Error status.
 
    call self%write_start_tag(name='Coordinates')
@@ -1215,9 +1240,9 @@ contains
    function write_geo_rect_data3_rank1_R4P(self, x, y, z) result(error)
    !< Write mesh with **RectilinearGrid** topology (data 3, rank 1, R4P).
    class(xml_writer_abstract), intent(inout) :: self  !< Writer.
-   real(R4P),                  intent(in)    :: x(1:) !< X coordinates.
-   real(R4P),                  intent(in)    :: y(1:) !< Y coordinates.
-   real(R4P),                  intent(in)    :: z(1:) !< Z coordinates.
+   real(R4P),                  allocatable, intent(in)    :: x(1:) !< X coordinates.
+   real(R4P),                  allocatable, intent(in)    :: y(1:) !< Y coordinates.
+   real(R4P),                  allocatable, intent(in)    :: z(1:) !< Z coordinates.
    integer(I4P)                              :: error !< Error status.
 
    call self%write_start_tag(name='Coordinates')
@@ -1232,7 +1257,7 @@ contains
    function write_geo_strg_data1_rank2_R8P(self, xyz) result(error)
    !< Write mesh with **StructuredGrid** topology (data 1, rank 2, R8P).
    class(xml_writer_abstract), intent(inout) :: self       !< Writer.
-   real(R8P),                  intent(in)    :: xyz(1:,1:) !< X, y, z coordinates [1:3,1:n].
+   real(R8P),                  allocatable, intent(in)    :: xyz(1:,1:) !< X, y, z coordinates [1:3,1:n].
    integer(I4P)                              :: error      !< Error status.
 
    call self%write_start_tag(name='Points')
@@ -1244,7 +1269,7 @@ contains
    function write_geo_strg_data1_rank2_R4P(self, xyz) result(error)
    !< Write mesh with **StructuredGrid** topology (data 1, rank 2, R4P).
    class(xml_writer_abstract), intent(inout) :: self       !< Writer.
-   real(R4P),                  intent(in)    :: xyz(1:,1:) !< X, y, z coordinates [1:3,:].
+   real(R4P),                  allocatable, intent(in)    :: xyz(1:,1:) !< X, y, z coordinates [1:3,:].
    integer(I4P)                              :: error      !< Error status.
 
    call self%write_start_tag(name='Points')
@@ -1256,7 +1281,7 @@ contains
    function write_geo_strg_data1_rank4_R8P(self, xyz) result(error)
    !< Write mesh with **StructuredGrid** topology (data 1, rank 4, R8P).
    class(xml_writer_abstract), intent(inout) :: self             !< Writer.
-   real(R8P),                  intent(in)    :: xyz(1:,1:,1:,1:) !< X, y, z coordinates [1:3,:,:,:].
+   real(R8P),                  allocatable, intent(in)    :: xyz(1:,1:,1:,1:) !< X, y, z coordinates [1:3,:,:,:].
    integer(I4P)                              :: error            !< Error status.
 
    call self%write_start_tag(name='Points')
@@ -1268,7 +1293,7 @@ contains
    function write_geo_strg_data1_rank4_R4P(self, xyz) result(error)
    !< Write mesh with **StructuredGrid** topology (data 1, rank 4, R4P).
    class(xml_writer_abstract), intent(inout) :: self             !< Writer.
-   real(R4P),                  intent(in)    :: xyz(1:,1:,1:,1:) !< X, y, z coordinates [1:3,:,:,:].
+   real(R4P),                  allocatable, intent(in)    :: xyz(1:,1:,1:,1:) !< X, y, z coordinates [1:3,:,:,:].
    integer(I4P)                              :: error            !< Error status.
 
    call self%write_start_tag(name='Points')
@@ -1281,9 +1306,9 @@ contains
    !< Write mesh with **StructuredGrid** topology (data 3, rank 1, R8P).
    class(xml_writer_abstract), intent(inout) :: self  !< Writer.
    integer(I4P),               intent(in)    :: n     !< Number of nodes.
-   real(R8P),                  intent(in)    :: x(1:) !< X coordinates.
-   real(R8P),                  intent(in)    :: y(1:) !< Y coordinates.
-   real(R8P),                  intent(in)    :: z(1:) !< Z coordinates.
+   real(R8P),                  allocatable, intent(in)    :: x(1:) !< X coordinates.
+   real(R8P),                  allocatable, intent(in)    :: y(1:) !< Y coordinates.
+   real(R8P),                  allocatable, intent(in)    :: z(1:) !< Z coordinates.
    integer(I4P)                              :: error !< Error status.
 
    if ((n/=size(x, dim=1)).or.(n/=size(y, dim=1)).or.(n/=size(z, dim=1))) then
@@ -1300,9 +1325,9 @@ contains
    !< Write mesh with **StructuredGrid** topology (data 3, rank 1, R4P).
    class(xml_writer_abstract), intent(inout) :: self  !< Writer.
    integer(I4P),               intent(in)    :: n     !< Number of nodes.
-   real(R4P),                  intent(in)    :: x(1:) !< X coordinates.
-   real(R4P),                  intent(in)    :: y(1:) !< Y coordinates.
-   real(R4P),                  intent(in)    :: z(1:) !< Z coordinates.
+   real(R4P),                  allocatable, intent(in)    :: x(1:) !< X coordinates.
+   real(R4P),                  allocatable, intent(in)    :: y(1:) !< Y coordinates.
+   real(R4P),                  allocatable, intent(in)    :: z(1:) !< Z coordinates.
    integer(I4P)                              :: error !< Error status.
 
    if ((n/=size(x, dim=1)).or.(n/=size(y, dim=1)).or.(n/=size(z, dim=1))) then
@@ -1319,9 +1344,9 @@ contains
    !< Write mesh with **StructuredGrid** topology (data 3, rank 3, R8P).
    class(xml_writer_abstract), intent(inout) :: self        !< Writer.
    integer(I4P),               intent(in)    :: n           !< Number of nodes.
-   real(R8P),                  intent(in)    :: x(1:,1:,1:) !< X coordinates.
-   real(R8P),                  intent(in)    :: y(1:,1:,1:) !< Y coordinates.
-   real(R8P),                  intent(in)    :: z(1:,1:,1:) !< Z coordinates.
+   real(R8P),                  allocatable, intent(in)    :: x(1:,1:,1:) !< X coordinates.
+   real(R8P),                  allocatable, intent(in)    :: y(1:,1:,1:) !< Y coordinates.
+   real(R8P),                  allocatable, intent(in)    :: z(1:,1:,1:) !< Z coordinates.
    integer(I4P)                              :: error       !< Error status.
 
    if ((n/=size(x, dim=1)*size(x, dim=2)*size(x, dim=3)).or.&
@@ -1340,9 +1365,9 @@ contains
    !< Write mesh with **StructuredGrid** topology (data 3, rank 3, R4P).
    class(xml_writer_abstract), intent(inout) :: self        !< Writer.
    integer(I4P),               intent(in)    :: n           !< Number of nodes.
-   real(R4P),                  intent(in)    :: x(1:,1:,1:) !< X coordinates.
-   real(R4P),                  intent(in)    :: y(1:,1:,1:) !< Y coordinates.
-   real(R4P),                  intent(in)    :: z(1:,1:,1:) !< Z coordinates.
+   real(R4P),                  allocatable, intent(in)    :: x(1:,1:,1:) !< X coordinates.
+   real(R4P),                  allocatable, intent(in)    :: y(1:,1:,1:) !< Y coordinates.
+   real(R4P),                  allocatable, intent(in)    :: z(1:,1:,1:) !< Z coordinates.
    integer(I4P)                              :: error       !< Error status.
 
    if ((n/=size(x, dim=1)*size(x, dim=2)*size(x, dim=3)).or.&
@@ -1363,7 +1388,7 @@ contains
    class(xml_writer_abstract), intent(inout) :: self       !< Writer.
    integer(I4P),               intent(in)    :: np         !< Number of points.
    integer(I4P),               intent(in)    :: nc         !< Number of cells.
-   real(R8P),                  intent(in)    :: xyz(1:,1:) !< X, y, z coordinates [1:3,:].
+   real(R8P),                  allocatable, intent(in)    :: xyz(1:,1:) !< X, y, z coordinates [1:3,:].
    integer(I4P)                              :: error      !< Error status.
 
    if (np/=size(xyz, dim=2)) then
@@ -1381,7 +1406,7 @@ contains
    class(xml_writer_abstract), intent(inout) :: self       !< Writer.
    integer(I4P),               intent(in)    :: np         !< Number of points.
    integer(I4P),               intent(in)    :: nc         !< Number of cells.
-   real(R4P),                  intent(in)    :: xyz(1:,1:) !< X, y, z coordinates [1:3,:].
+   real(R4P),                  allocatable, intent(in)    :: xyz(1:,1:) !< X, y, z coordinates [1:3,:].
    integer(I4P)                              :: error      !< Error status.
 
    if (np/=size(xyz, dim=2)) then
@@ -1399,9 +1424,9 @@ contains
    class(xml_writer_abstract), intent(inout) :: self  !< Writer.
    integer(I4P),               intent(in)    :: np    !< Number of points.
    integer(I4P),               intent(in)    :: nc    !< Number of cells.
-   real(R8P),                  intent(in)    :: x(1:) !< X coordinates.
-   real(R8P),                  intent(in)    :: y(1:) !< Y coordinates.
-   real(R8P),                  intent(in)    :: z(1:) !< Z coordinates.
+   real(R8P),                  allocatable, intent(in)    :: x(1:) !< X coordinates.
+   real(R8P),                  allocatable, intent(in)    :: y(1:) !< Y coordinates.
+   real(R8P),                  allocatable, intent(in)    :: z(1:) !< Z coordinates.
    integer(I4P)                              :: error !< Error status.
 
    if ((np/=size(x, dim=1)).or.(np/=size(y, dim=1)).or.(np/=size(z, dim=1))) then
@@ -1419,9 +1444,9 @@ contains
    class(xml_writer_abstract), intent(inout) :: self  !< Writer.
    integer(I4P),               intent(in)    :: np    !< Number of points.
    integer(I4P),               intent(in)    :: nc    !< Number of cells.
-   real(R4P),                  intent(in)    :: x(1:) !< X coordinates.
-   real(R4P),                  intent(in)    :: y(1:) !< Y coordinates.
-   real(R4P),                  intent(in)    :: z(1:) !< Z coordinates.
+   real(R4P),                  allocatable, intent(in)    :: x(1:) !< X coordinates.
+   real(R4P),                  allocatable, intent(in)    :: y(1:) !< Y coordinates.
+   real(R4P),                  allocatable, intent(in)    :: z(1:) !< Z coordinates.
    integer(I4P)                              :: error !< Error status.
 
    if ((np/=size(x, dim=1)).or.(np/=size(y, dim=1)).or.(np/=size(z, dim=1))) then
@@ -1489,11 +1514,11 @@ contains
    !<+ cell\_type(2) = 14 pyramid type of second cell
    class(xml_writer_abstract), intent(inout) :: self             !< Writer.
    integer(I4P),               intent(in)    :: nc               !< Number of cells.
-   integer(I4P),               intent(in)    :: connectivity(1:) !< Mesh connectivity.
-   integer(I4P),               intent(in)    :: offset(1:)       !< Cell offset.
-   integer(I4P),   optional,   intent(in)    :: face(1:)         !< face composing the polyhedra.
-   integer(I4P),   optional,   intent(in)    :: faceoffset(1:)   !< face offset.
-   integer(I1P),               intent(in)    :: cell_type(1:)    !< VTK cell type.
+   integer(I4P),               allocatable, intent(in)    :: connectivity(1:) !< Mesh connectivity.
+   integer(I4P),               allocatable, intent(in)    :: offset(1:)       !< Cell offset.
+   integer(I4P),   optional,   allocatable, intent(in)    :: face(1:)         !< face composing the polyhedra.
+   integer(I4P),   optional,   allocatable, intent(in)    :: faceoffset(1:)   !< face offset.
+   integer(I1P),               allocatable, intent(in)    :: cell_type(1:)    !< VTK cell type.
    integer(I4P)                              :: error            !< Error status.
 
    call self%write_start_tag(name='Cells')

@@ -1,0 +1,29 @@
+{
+    "fortran.linter.extraArgs": [],
+    "fortran.linter.includePaths": [
+        "${WORKSPACE_FOLDER:default}/**"
+    ],
+    "fortran.linter.fypp.enabled": true,
+    "fortran.linter.fypp.path": "fypp",
+    "fortran.formatting.formatter": "fprettify",
+    "fortran.formatting.path": "/usr/local/bin/fprettify",
+    "fortran.fortls.path": "fortls",
+    "fortran.fortls.extraArgs": [],
+    "fortran.formatting.fprettifyArgs": [
+        "--indent",
+        "4",
+        "--enable-decl",
+        "--strip-comments",
+        "--case",
+        "1",
+        "1",
+        "1",
+        "1",
+    ],
+    "[fortran]": {
+        "editor.formatOnSave": true,
+    },
+    "[fortran.inc]": {
+        "editor.formatOnSave": false
+    },
+}
